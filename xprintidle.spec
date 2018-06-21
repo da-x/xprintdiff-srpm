@@ -16,6 +16,8 @@ BuildRequires:          libXScrnSaver-devel
 xprintidle is a small program that prints the user's idle time to stdout,
 using the X screensaver extension. It is meant for use in scripts.
 
+%define debug_package %{nil}	
+
 %prep
 %setup -q
 
@@ -30,12 +32,8 @@ using the X screensaver extension. It is meant for use in scripts.
 
 %files
 %defattr(-,root,root)
-%doc COPYING README
 %{_bindir}/xprintidle
 
-%changelog
-* Mon Mar 18 2016 Dan Aloni <alonid@gmail.com> 0.1-2
-- repackaged for Fedora
+%doc COPYING README
 
-* Mon Nov 21 2005 Pascal Bleser <guru@unixtech.be> 0.1-1
-- new package
+%changelog
